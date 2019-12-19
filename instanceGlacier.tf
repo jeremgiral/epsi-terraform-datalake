@@ -1,6 +1,6 @@
 
 resource "aws_s3_bucket" "bucketglacier" {
-  bucket = "bucket-galcier-epsi-react"
+  bucket = "bucket-glacier-epsi-react"
   acl    = "private"
 
   tags = {

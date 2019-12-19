@@ -3,9 +3,10 @@ const fs = require("fs")
 const path = require("path")
 const uploadDir = path.join(__dirname, "/files/") //i made this  before the function because i use it multiple times for deleting later
 const AWS = require("aws-sdk")
+const key = require("./key")
 const s3 = new AWS.S3({
-  accessKeyId: "AKIA5CO7LCOXRUQQ7LYD",
-  secretAccessKey: "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"
+  accessKeyId: key.accessKeyId,
+  secretAccessKey: key.secretAccessKey
 })
 module.exports = function upload(req, res) {
   var form = new IncomingForm()
